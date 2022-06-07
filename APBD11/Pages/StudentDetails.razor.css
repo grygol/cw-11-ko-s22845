@@ -1,0 +1,30 @@
+﻿img.avatar {
+    border-radius: 50%;
+    width: 150px;
+    aspect-ratio: 1/1;
+}
+
+button {
+    border-radius: 4px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: white;
+    border-width: 0px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #66BB6A;
+    transition: background-color .2s;
+}
+
+    button:hover {
+        background-color: #4CAF50;
+    }
+
+    button:active {
+        background-color: #81C784;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .6);
+    }
+
+td {
+    padding: 5px;
+}
