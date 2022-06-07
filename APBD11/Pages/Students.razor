@@ -8,10 +8,12 @@
     <thead>
         <tr>
             <th>Avatar</th>
-            <th @onclick="@(() => Sort("FirstName"))">First Name</th>
-            <th @onclick="@(() => Sort("LastName"))">Last Name</th>
-            <th @onclick="@(() => Sort("Birthdate"))">Birthdate</th>
-            <th @onclick="@(() => Sort("Studies"))">Studies</th>
+            <th @onclick="@(() => Sort("FirstName"))" >First Name</th>
+            <th @onclick="@(() => Sort("LastName"))" >Last Name</th>
+            <th @onclick="@(() => Sort("Birthdate"))" >Birthdate</th>
+            <th @onclick="@(() => Sort("Studies"))" >Studies</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -23,8 +25,8 @@
             <td>@stud.LastName</td>
             <td>@stud.Birthdate.ToShortDateString()</td>
             <td>@stud.Studies</td>
-            <td><button @onclick="(() => DeleteStudent(stud.ID))">Delete</button></td>
-            <td><button @onclick="(() => ShowDetails(stud.ID))">Details</button></td>
+            <td><button @onclick="(() => DeleteStudent(stud.ID))" class="delete">Delete</button></td>
+            <td><button @onclick="(() => ShowDetails(stud.ID))" class="details">Details</button></td>
         </tr>
         }
     </tbody>

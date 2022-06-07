@@ -3,12 +3,29 @@
 @inject NavigationManager navigator
 
 <h3>Student Details</h3>
-<input value="@Student.FirstName" disabled />
-<input value="@Student.LastName" disabled />
-<input value="@Student.Birthdate.ToShortDateString()" disabled />
-<input value="@Student.Studies" disabled />
-<img alt="@(Student.FirstName) @(Student.LastName) avatar" src="@Student.AvatarUrl" class="avatar" />
 
+<table>
+    <tr>
+        <td>First name: </td>
+        <td><input value="@Student.FirstName" disabled /></td>
+        <td rowspan="3"><img alt="@(Student.FirstName) @(Student.LastName) avatar" src="@Student.AvatarUrl" class="avatar" /></td>
+    </tr>
+    <tr>
+        <td>Last name:</td>
+        <td><input value="@Student.LastName" disabled /></td>
+    </tr>
+    <tr>
+        <td>Birthday date:</td>
+        <td><input value="@Student.Birthdate.ToShortDateString()" disabled /></td>
+    </tr>
+    <tr>
+        <td>Studies:</td>
+        <td><input value="@Student.Studies" disabled /></td>
+    </tr>
+</table>
+
+
+<br/>
 <button @onclick="Return">Return</button>
 
 
